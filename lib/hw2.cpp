@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <iostream>
 
 using namespace std;
 
@@ -42,23 +43,39 @@ class LinkedList
         void push_back(Item a);
         Item get(int n);
         int length();
-        bool remove_front(Item &copy);
+        Item remove_front();
         bool empty() {return head==NULL;}
+        void print();
 };
 
 LinkedList::LinkedList()
 {
     head = NULL;
     tail = NULL;
+    cout << "constructed" << endl;
 }
 LinkedList::~LinkedList()
 {
     Item t;
     while(!empty())
     {
-        remove_front(t);
+        remove_front();
+        cout << "Destroyed" << endl;
     }
 }
+
+void LinkedList::print()
+{
+    Node *current;
+    current = head;
+    while(current!=NULL)
+    {
+        cout << current->getItem().str << "->";
+        current = current->getNext();
+    }
+    cout << "NULL" << endl;
+}
+    
 void LinkedList::push_back(Item a)
 {
     Node *node = new Node(a);
@@ -100,17 +117,39 @@ int LinkedList::length()
     return count;
 }
 
-bool LinkedList::remove_front(Item &copy)
+Item LinkedList::remove_front()
 {
     if(!empty())
     {
-        copy = head->getItem();
+        Item copy = head->getItem();
         Node *tmp = head->getNext();
         delete head;
         head = tmp;
         if (tmp==NULL)
             tail = NULL;
-        return true;
+        return copy;
     }
-    return false;
+    return NULL;
+}
+int main()
+{
+    Item a = Item("penis");
+    Item b = Item("balls");
+    Item c = Item("tits");
+    Item d = Item("fuckyou");
+    Item e = Item("fuckballsmcgee");
+    LinkedList test = LinkedList();
+    test.push_back(a);
+    test.push_back(b);
+    cout << test.get(1).str << endl << endl << endl;
+    test.push_back(c);
+    test.push_back(d);
+    test.push_back(e);
+    test.print();
+    cout << endl;
+    //test.remove_front();
+    //test.remove_front();
+    //test.print();
+
+    return 0;
 }
