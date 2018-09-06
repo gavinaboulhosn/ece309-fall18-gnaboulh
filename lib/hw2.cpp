@@ -133,11 +133,11 @@ Item LinkedList::remove_front()
 }
 int main()
 {
-    Item a = Item("penis");
-    Item b = Item("balls");
-    Item c = Item("tits");
-    Item d = Item("fuckyou");
-    Item e = Item("fuckballsmcgee");
+    Item a = Item("a");
+    Item b = Item("b");
+    Item c = Item("c");
+    Item d = Item("d");
+    Item e = Item("e");
     LinkedList test = LinkedList();
     test.push_back(a);
     test.push_back(b);
