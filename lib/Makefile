@@ -1,6 +1,6 @@
 
 # add files you create here
-OBJ = example.o
+OBJ = example.o hw2.o hw3.o
 
 all: libece309.a
 
