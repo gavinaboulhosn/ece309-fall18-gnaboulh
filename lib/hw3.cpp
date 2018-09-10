@@ -81,10 +81,6 @@ ListArray::ListArray(int initSize)
 {
     size = initSize;
     array = new Item[size];
-    for (int i = 0; i < size; i++)
-    {
-        array[i].str = NULL;
-    }
     items = 0;
 }
 
