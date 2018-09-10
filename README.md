@@ -1,5 +1,5 @@
 # ece309-fall18-unityid
-[![Build Status](https://travis-ci.org/gavinaboulhosn/ece309-fall18-gnaboulh.svg?branch=master)](https://travis-ci.com/gavinaboulhosn/ece309-fall18-gnaboulh.svg?token=5xyCBy3iLtAw1t1LabhE&branch=master)
+[![Build Status](https://travis-ci.com/gavinaboulhosn/ece309-fall18-gnaboulh.svg?token=5xyCBy3iLtAw1t1LabhE&branch=master)](https://travis-ci.com/gavinaboulhosn/ece309-fall18-gnaboulh)
 
 Gavin Aboulhosn, ECE 309, 9/4/2018
 
