@@ -1,4 +1,6 @@
 # ece309-fall18-unityid
+[![Build Status](https://travis-ci.org/gavinaboulhosn/ece309-fall18-gnaboulh.svg?branch=master)](https://travis-ci.org/gavinaboulhosn/ece309-fall18-gnaboulh)
+
 Gavin Aboulhosn, ECE 309, 9/4/2018
 
 * HW2
