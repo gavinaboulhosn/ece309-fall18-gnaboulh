@@ -9,7 +9,7 @@ PList::PList(){
   tail = NULL;
 }
 
-void PList::append(Object *a){
+void PList::append(Container *a){
   Node *node = new Node(a);
   if(head == NULL){
     head = node;
@@ -39,11 +39,11 @@ void PList::print()
 
 int main(){
   PList p;
-  Object o;
-  Object *o1 = new String("This is a test");
-  Object *o2 = new Num(15);
-  Object *o3 = new Dub(3.14);
-  Object *o4 = new String("This test is complete.");
+  Container o;
+  Container *o1 = new String("This is a test");
+  Container *o2 = new Integer(15);
+  Container *o3 = new Double(3.14);
+  Container *o4 = new String("This test is complete.");
   p.append(o1);
   p.append(o2);
   p.append(o3);

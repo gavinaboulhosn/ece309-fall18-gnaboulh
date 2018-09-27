@@ -10,7 +10,7 @@ PList::PList(){
 }
 
 void PList::append(Container *a){
-  PListNode *node = new PListNode(a);
+  Node *node = new Node(a);
   if(head == NULL){
     head = node;
     tail = node;
@@ -27,7 +27,7 @@ void PList::erase(PList::iterator it)
 
 void PList::print()
 {
-  PListNode * current;
+  Node * current;
   current = head;
   while(current!=NULL)
   {

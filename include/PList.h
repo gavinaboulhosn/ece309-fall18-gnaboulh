@@ -41,24 +41,24 @@ public:
 class PList{
 private:
 
-  class PListNode{
+  class Node{
   private:
     Container *Obj;
   public:
-    PListNode* next;
-    PListNode(Container *o):Obj(o){next = NULL;}
+    Node* next;
+    Node(Container *o):Obj(o){next = NULL;}
     Container* getObject(){return Obj;}
-    PListNode* getNext(){return next;}
+    Node* getNext(){return next;}
   };
-  PListNode *head;
-  PListNode *tail;
+  Node *head;
+  Node *tail;
 public:
 
   class iterator{
   private:
-    PListNode *node;
+    Node *node;
   public:
-    iterator(PListNode *n=NULL) { node = n; }
+    iterator(Node *n=NULL) { node = n; }
     Container &getObject() { return *node->getObject(); }
     void increment() { node = node->next; }
     bool end() {  return node=NULL; }
