@@ -26,16 +26,16 @@ public:
 class Integer : public Container{
 public:
   int a;
-  Integer(int b = 0): a(b) {}
+  Integer(int i = 0): a(i) {}
   void print() {cout << a << endl;}
 };
 
 //Object Hold a duoble
 class Double : public Container{
 public:
-  double x;
-  Double(double y = 0): x(y){}
-  void print(){cout<< x << endl;};
+  double dub;
+  Double(double x = 0): dub(x){}
+  void print(){cout<< dub << endl;};
 };
 
 class PList{
@@ -49,6 +49,7 @@ private:
     Node(Container *o):Obj(o){next = NULL;}
     Container* getObject(){return Obj;}
     Node* getNext(){return next;}
+
   };
   Node *head;
   Node *tail;
@@ -68,8 +69,8 @@ public:
 public:
   PList();
   void append(Container *a);
-  void erase(iterator it);
-  bool empty();
+  void erase(PList::iterator& it);
+  bool empty(){return head==NULL;}
   void print();
 
   iterator begin(){

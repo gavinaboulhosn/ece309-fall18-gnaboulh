@@ -9,6 +9,27 @@ PList::PList(){
   tail = NULL;
 }
 
+void PList::erase(PList::iterator& it)
+{
+    if(it.node==NULL)
+    {
+        Node *remove = head;
+        head = head->getNext();
+        if (head==NULL) tail = NULL;
+        delete remove;
+    }
+    else
+    {
+        Node *tmp = it.node;
+        Node *remove = tmp->getNext();
+        tmp->next = remove->next; 
+        if (tail == remove) tail = tmp;
+        delete remove;
+    }
+
+
+}
+
 void PList::append(Container *a){
   Node *node = new Node(a);
   if(head == NULL){
@@ -20,10 +41,6 @@ void PList::append(Container *a){
   }
 }
 
-void PList::erase(PList::iterator it)
-{
-
-}
 
 void PList::print()
 {
@@ -35,20 +52,28 @@ void PList::print()
     current = current->getNext();
   }
 
-};
+}
 
 
-int main(){
-  PList p;
+int main()
+{
+  PList list;
   Container o;
-  Container *o1 = new String("This is a test");
-  Container *o2 = new Integer(15);
-  Container *o3 = new Double(3.14);
-  Container *o4 = new String("This test is complete.");
-  p.append(o1);
-  p.append(o2);
-  p.append(o3);
-  p.append(o4);
-  p.print();
-  cout <<endl;
+  PList::iterator it = list.begin();
+  
+  
+  Container *a = new String("Hello there");
+  Container *b = new Integer(1520303);
+  Container *c = new Double(234.23443343);
+  Container *d = new String("I am now done with this homework");
+  
+  
+  list.append(a);
+  list.append(b);
+  list.append(c);
+  list.append(d);
+  list.print();
+  list.erase(it);
+  list.erase(it);
+  list.print();
 }
