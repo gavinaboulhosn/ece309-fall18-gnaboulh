@@ -20,7 +20,7 @@ void PList::append(Container *a){
   }
 }
 
-void PList::erase(PList::iterator it)
+void PList::erase(PList::iterator& it)
 {
 
 }
