@@ -1,6 +1,6 @@
 
 # add files you create here
-OBJ = example.o hw2.o hw3.o PList.o
+OBJ = example.o hw2.o hw3.o PList.o IntArray.o reverse_iterator.o
 
 all: libece309.a
 

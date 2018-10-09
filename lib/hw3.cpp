@@ -19,7 +19,7 @@ class ListArray
 {
     private:
         int items;
-        int size;
+        size_t size;
         Item* array;
     public:
         ListArray();
@@ -37,7 +37,7 @@ void ListArray::push_back(Item str)
 {
     if(size < items+1)
     {
-        int newSize = size*2;
+        size_t newSize = size*2;
         Item* newArr = new Item[newSize];
         memcpy(newArr, array, size*sizeof(Item));
         size = newSize;
