@@ -110,22 +110,3 @@ void IntArray::print(){
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-int main()
-{
-  return 0;
-}
