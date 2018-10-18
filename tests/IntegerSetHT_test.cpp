@@ -15,7 +15,7 @@ int main()
     // }
     // ht.print();
 
-    IntegerSetHT set(50);
+    IntegerSetHT set;
     set.insert(5);
     set.insert(99);
     set.insert(0);

@@ -55,7 +55,7 @@ class IntegerSetHT : public IntegerSet {
             friend class IntegerSetHT;
 
         };
-        IntegerSetHT(int htsize);
+        IntegerSetHT(int htsize=1000);
         virtual bool insert(int) override;
         virtual bool search(int) const override;
         virtual void remove(int) override;
