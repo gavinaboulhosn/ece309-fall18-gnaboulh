@@ -1,6 +1,6 @@
 
 # add files you create here
-OBJ = example.o hw2.o hw3.o PList.o IntArray.o IntSetArray.o
+OBJ = example.o hw2.o hw3.o PList.o IntArray.o IntSetArray.o IntegerSetHT.o
 
 all: libece309.a
 
@@ -14,4 +14,4 @@ libece309.a: $(OBJ)
 	$(AR) -r $@ $(OBJ) 
 
 %.o:%.cpp
-	$(CXX) -c -o $@ -I . -I ../include $< -Wall -Werror
+	$(CXX) -c -o $@ -I . -I ../include $< -Wall -Werror -std=c++11

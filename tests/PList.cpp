@@ -39,7 +39,6 @@ void PList::print()
 int main()
 {
   PList list;
-  Container o;
   PList::iterator it = list.begin();
   
   
