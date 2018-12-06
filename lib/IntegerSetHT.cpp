@@ -4,7 +4,7 @@
 #include <iostream>
 
 using namespace std;
-
+using namespace ece309;
 // can only hold positive integers
 IntegerSetHT::IntegerSetHT(int htsize)
 :IntegerSet(htsize)
@@ -15,6 +15,7 @@ IntegerSetHT::IntegerSetHT(int htsize)
    table = new int[size];
    for(int i=0; i<size; i++)
       table[i] = empty_since_start;  // -1 means empty
+    
 }
 
 bool IntegerSetHT::insert(int data)
@@ -27,11 +28,10 @@ bool IntegerSetHT::insert(int data)
    {
      // if the entry is not being used, put the
     // data there
-    
      table[ index ] = data;
      return true;
    }
-   if(bucketsProbed>2)
+   if(bucketsProbed==2)
       collisions+=1;
    index = (index+1) % size;
   }

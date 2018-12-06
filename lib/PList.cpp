@@ -1,8 +1,9 @@
 #include "PList.h"
 #include <stdio.h>
 #include <iostream>
+#include <string>
 
-using namespace std;
+using namespace ece309;
 
 PList::PList(){
   head = NULL;

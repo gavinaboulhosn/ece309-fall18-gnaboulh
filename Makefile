@@ -9,3 +9,7 @@ run: all
 clean:
 	@make -C lib clean
 	@make -C tests clean
+
+do: all run clean
+	
+

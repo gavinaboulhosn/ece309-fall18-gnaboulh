@@ -1,6 +1,6 @@
 
 # add files you create here
-OBJ = example.o hw2.o hw3.o PList.o IntArray.o IntSetArray.o IntegerSetHT.o
+OBJ = example.o hw2.o hw3.o PList.o IntArray.o IntSetArray.o IntegerSetHT.o MaxHeap.o
 
 all: libece309.a
 

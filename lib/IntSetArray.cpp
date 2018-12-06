@@ -1,5 +1,5 @@
 #include "IntegerSetArray.h"
-
+using namespace ece309;
 IntegerSetArray::IntegerSetArray(int le, int val)
 :IntegerSet(le)
 {

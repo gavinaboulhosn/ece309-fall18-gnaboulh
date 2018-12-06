@@ -1,7 +1,7 @@
 #include "IntArray.h"
 
 using namespace std;
-
+using namespace ece309;
 IntArray::IntArray(const char* str)
 {
   length = strlen(str);

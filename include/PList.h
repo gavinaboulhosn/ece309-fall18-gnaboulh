@@ -7,7 +7,8 @@
 #include <string.h>
 
 using namespace std;
-
+namespace ece309
+{
 
 class Container{
 public:
@@ -77,5 +78,5 @@ public:
    return iterator(head);
  }
 };
-
+}
 #endif

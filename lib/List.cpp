@@ -2,7 +2,7 @@
 
 #include "List.h"
 // Hold a string
-
+using namespace ece309;
 List::List()
 {
   // start with an empty list

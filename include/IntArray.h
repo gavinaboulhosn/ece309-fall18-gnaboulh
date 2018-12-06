@@ -7,7 +7,7 @@
 #include <string.h>
 #include <string>
 
-
+namespace ece309{
 class IntArray
 {
     private:
@@ -47,4 +47,5 @@ class IntArray
         operator int() const;
         void print();
 };
+}
 #endif

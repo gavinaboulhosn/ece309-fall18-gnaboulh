@@ -6,13 +6,14 @@
 
 using namespace std;
 // IntegerSet abstract base class to demonstrate hash table concepts
+namespace ece309
+{
 class IntegerSet {
     protected:
         int size;
         int hash(int key) const 
-        { 
-            
-            return (key*997) % size;
+        {            
+            return ((key*47)&~size) % size;
         }
     public:
         IntegerSet(int htsize):size(htsize) {}
@@ -40,17 +41,17 @@ class IntegerSetHT : public IntegerSet {
                 
             public:
                 HTIterator(int* hashTable, int sz) : ht(hashTable), key(0), size(sz) {}
-                void increment() { key++; }
+                void increment() { ++key; }
                 int getValue() 
                 {
-                    if (ht[key]==-1 || ht[key] == -2)
+                    if (ht[key] < 0)
                     {
-                        key++;
+                        ++key;
                         getValue();
                     }
                     return ht[key];
                 }
-                bool end() { return key >= size; }
+                bool end() { return key > size; }
 
             friend class IntegerSetHT;
 
@@ -65,5 +66,5 @@ class IntegerSetHT : public IntegerSet {
         }
         void print();
 };
-
+}
 #endif //INTEGERSET_H
