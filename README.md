@@ -1,7 +1,5 @@
-# ece309-fall18-unityid
+# ECE 309 Data Structures and Algorithms (Fall 2018)
 [![Build Status](https://travis-ci.com/gavinaboulhosn/ece309-fall18-gnaboulh.svg?token=5xyCBy3iLtAw1t1LabhE&branch=master)](https://travis-ci.com/gavinaboulhosn/ece309-fall18-gnaboulh)
 
-Gavin Aboulhosn, ECE 309, 9/4/2018
-
-* HW2
-  * I first forked Professor Tucks repository then duplicated it by cloning it to my desktop then pushing it to a new private repository.  I then added the collaborators as instructed. After this i linked the repository to travis-ci
+## Purpose
+This repository contains the code for assignments in my data structures and algorithms course at North Carolina State University.  
